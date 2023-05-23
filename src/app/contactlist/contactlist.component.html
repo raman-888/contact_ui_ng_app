@@ -1,0 +1,56 @@
+<!--<p>contactlist works!</p>
+<table>
+    <thead>
+       <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Number</th>
+
+       </tr>
+    </thead>
+    <tbody>
+         <tr *ngfor="let c of contacts">
+            <td>{{c.contactId}}</td>
+            <td>{{c.contactName}}</td>
+            <td>{{c.contactEmail}}</td>
+            <td>{{c.contactNum}}</td>
+            <td>
+                <button (click)="editcontact(c.contactId)"> Edit</button>
+            </td>
+            <td>
+                <button (click)="deletecontact(c.contactId)"> Delete</button>
+            </td>
+            
+
+
+         </tr>
+    </tbody>
+</table>
+-->
+<h2>Contact List</h2>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contact of contacts">
+            <td>{{contact.contactId}}</td>
+            <td>{{contact.contactName}}</td>
+            <td>{{contact.contactEmail}}</td>
+            <td>{{contact.contactNum}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deletecontact(contact.contactId)">Delete</button>
+            &nbsp;
+              <button class="btn btn-info" (click)="editcontact(contact.contactId)">Update</button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+  
